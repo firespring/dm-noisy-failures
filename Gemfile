@@ -1,9 +1,9 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
 gemspec
 
 group :test do
-  gem "dm-sqlite-adapter"
-  gem "rake"
-  gem "rspec"
+  gem 'dm-sqlite-adapter'
+  gem 'rake'
+  gem 'rspec'
 end
