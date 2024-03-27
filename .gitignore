@@ -1,4 +1,4 @@
 *.gem
 .rvmrc
-Gemfile.lock
+Gemfile.*
 spec/test.db

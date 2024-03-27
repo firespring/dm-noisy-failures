@@ -28,6 +28,6 @@ class Address
   property :zipcode,        Integer, required: true
 end
 
-DataMapper.setup(:default, 'sqlite3://' + File.join(File.dirname(__FILE__), 'test.db'))
+DataMapper.setup(:default, "sqlite3://#{File.join(File.dirname(__FILE__), 'test.db')}")
 DataMapper.finalize
 DataMapper.auto_migrate!
