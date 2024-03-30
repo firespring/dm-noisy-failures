@@ -52,8 +52,8 @@ describe DataMapper::Resource do
       @person.memberships << Membership.new
       @person.memberships.first.type = 'gym'
       @person.save
-      @person.saved?.should be_true
-      @person.memberships.first.saved?.should be_true
+      expect(@person.saved?).to be true
+      expect(@person.memberships.first.saved?).to be true
     end
 
     it 'does not block the creation of many-to-many associations' do
@@ -69,9 +69,9 @@ describe DataMapper::Resource do
   describe '#save?' do
     it 'returns true or false to indicate whether a record saved successfully or not' do
       @person.name = 'Joe Schmoe'
-      @person.save?.should be_true
+      expect(@person.save?).to be true
       @person.name = nil
-      @person.save?.should be_false
+      expect(@person.save?).to be false
     end
   end
 
@@ -108,8 +108,8 @@ describe DataMapper::Resource do
     it 'returns true or false, same as #save?' do
       @person.name = 'Joe Schmoe'
       @person.save
-      @person.update?(name: 'Johnny Q. Public').should be_true
-      @person.update?(name: nil).should be_false
+      expect(@person.update?(name: 'Johnny Q. Public')).to be true
+      expect(@person.update?(name: nil)).to be false
     end
   end
 
@@ -129,10 +129,10 @@ describe DataMapper::Resource do
       @person.name = 'Joe Schmoe'
       @person.save
       @person.memberships.create(type: 'pool')
-      @person.destroy?.should be_false
+      expect(@person.destroy?).to be false
       @person.memberships.destroy
       @person.reload
-      @person.destroy?.should be_true
+      expect(@person.destroy?).to be true
     end
   end
 end
