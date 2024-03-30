@@ -17,8 +17,8 @@ module DataMapper
       raise SaveFailureError.new(error_message, self)
     end
 
-    def update?(*)
-      update(*)
+    def update?(*args)
+      update(*args)
       true
     rescue
       # This seems like the cleanest way of doing this. #update calls #save internally, so we can't
@@ -36,8 +36,8 @@ module DataMapper
     def self.included(base)
       @@original_included_method&.call(base)
 
-      def base.create?(*)
-        create(*)
+      def base.create?(*args)
+        create(*args)
       rescue
         nil
       end
