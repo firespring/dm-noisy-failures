@@ -2,3 +2,6 @@
 .rvmrc
 Gemfile.*
 spec/test.db
+
+## Rubymine
+.idea/
