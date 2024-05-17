@@ -62,7 +62,7 @@ describe DataMapper::Resource do
       @person.friends << Person.create(name: 'Fannie')
       @person.save
       @person.reload
-      @person.friends.map(&:name).should =~ %w(Freddy Fannie)
+      expect(@person.friends.map(&:name)).to match %w(Freddy Fannie)
     end
   end
 
@@ -85,8 +85,8 @@ describe DataMapper::Resource do
 
   describe '#create?' do
     it 'returns an instance or nil depending on whether the record was saved successfully or not' do
-      Person.create?.should be_nil
-      Person.create?(name: 'Joe Schmoe').should be_a(Person)
+      expect(Person.create?).to be_nil
+      expect(Person.create?(name: 'Joe Schmoe')).to be_a(Person)
     end
   end
 
@@ -98,9 +98,9 @@ describe DataMapper::Resource do
         @person.update(name: nil)
       end.should =~ /name.*blank/i
       @person.reload
-      lambda {
+      expect {
         @person.update(name: 'Johnny Q. Public')
-      }.should_not raise_error
+      }.not_to raise_error
     end
   end
 
@@ -118,9 +118,9 @@ describe DataMapper::Resource do
       @person.name = 'Joe Schmoe'
       @person.save
       @person.memberships.create(type: 'gym')
-      lambda {
+      expect {
         @person.destroy
-      }.should raise_error
+      }.to raise_error
     end
   end
 
