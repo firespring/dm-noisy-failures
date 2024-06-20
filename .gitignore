@@ -2,3 +2,6 @@
 .rvmrc
 Gemfile.lock
 spec/test.db
+
+## RubyMine
+.idea
