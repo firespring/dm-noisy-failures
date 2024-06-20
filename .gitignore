@@ -3,5 +3,5 @@
 Gemfile.*
 spec/test.db
 
-## Rubymine
-.idea/
+## RubyMine
+.idea
