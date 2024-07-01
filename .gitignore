@@ -1,7 +1,23 @@
-*.gem
-.rvmrc
-Gemfile.*
-spec/test.db
+## MAC OS
+.DS_Store
+
+## EMACS
+*~
+\#*
+.\#*
+
+## VIM
+*.swp
 
 ## RubyMine
 .idea
+
+## PROJECT::GENERAL
+*.gem
+.rvmrc
+spec/test.db
+
+
+## BUNDLER
+.bundle
+Gemfile.*
