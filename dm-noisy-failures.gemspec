@@ -1,7 +1,7 @@
 require File.expand_path('lib/data_mapper/noisy_failures/version', __dir__)
 
 Gem::Specification.new do |s|
-  s.name        = 'dm-noisy-failures'
+  s.name        = 'sbf-dm-noisy-failures'
   s.version     = DataMapper::NoisyFailures::VERSION
   s.required_ruby_version = '>= 2.7.8'
   s.platform    = Gem::Platform::RUBY
