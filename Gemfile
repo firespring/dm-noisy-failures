@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gemspec
 
 group :development, :test do
-  gem 'dm-sqlite-adapter'
+  gem 'sbf-dm-sqlite-adapter'
   gem 'pry'
   gem 'pry-byebug'
   gem 'rake', '~> 13.1'
