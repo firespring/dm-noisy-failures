@@ -13,7 +13,8 @@ Gem::Specification.new do |s|
                   'operations are not successfully completed.'
   s.license     = 'MIT'
 
-  s.add_dependency 'sbf-data_mapper'
+  s.add_dependency 'data_mapper'
   s.files        = Dir['{lib}/**/*.rb']
   s.require_path = 'lib'
+  s.add_runtime_dependency('sbf-dm-core',     '~> 1.3.0.beta')
 end
