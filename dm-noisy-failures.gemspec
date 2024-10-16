@@ -5,8 +5,8 @@ Gem::Specification.new do |s|
   s.version     = DataMapper::NoisyFailures::VERSION
   s.required_ruby_version = '>= 2.7.8'
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ['Daniel Tao']
-  s.email       = ['daniel.tao@gmail.com']
+  s.authors     = ['opensource_firespring']
+  s.email       = ['opensource@firespring.com']
   s.homepage    = 'https://github.com/dtao/dm-noisy-failures'
   s.summary     = 'Noisy (and descriptive) failures for DataMapper'
   s.description = 'This library replaces the default behavior of DataMapper by raising exceptions with descriptive error messages whenever DB ' \
